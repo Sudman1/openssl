@@ -573,13 +573,13 @@ our %disabled = ( # "what"         => "comment"
                   "msan"                => "default",
                   "rc5"                 => "default",
                   "sctp"                => "default",
-#                    "ssl3"                => "default",
-#                    "ssl3-method"         => "default",
+##                     "ssl3"                => "default",
+##                     "ssl3-method"         => "default",
                   "tfo"                 => "default",
                   "trace"               => "default",
                   "ubsan"               => "default",
                   "unit-test"           => "default",
-#                    "weak-ssl-ciphers"    => "default",
+##                     "weak-ssl-ciphers"    => "default",
                   "zlib"                => "default",
                   "zlib-dynamic"        => "default",
                   "zstd"                => "default",
@@ -3676,6 +3676,7 @@ sub tokenize {
     }
     return @result;
 }
+
 
 
 
