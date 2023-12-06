@@ -13,6 +13,10 @@ $fixedText = $configureText -replace '( +"(ssl3.*?|weak-ssl-ciphers)"\s+=> "defa
 
 $fixedText | Set-Content -Path ".\Configure"
 
+
+$env:LC_ALL="en_US.UTF-8"
+$env:__CNF_LDLIBS="libcmt.lib libvcruntime.lib"
+
 perl Configure enable-weak-ssl-ciphers enable-ssl3-method enable-ssl3 no-shared no-pic no-threads -static --config=Configure.vars VC-WIN64A
 
 nmake
